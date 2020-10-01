@@ -19,6 +19,10 @@ client.connect(err => {
   const orderCollection = client.db("emaJhon").collection("orders");
    console.log('database connected')
 
+   app.get('/', (req, res) =>{
+       res.send('Hello I am working')
+   })
+
 
    app.post('/addProducts', (req, res) =>{
         const products = req.body
